@@ -1,0 +1,20 @@
+<div class="content">
+    <h3>Add Chain</h3>
+    <div class="mb-3">
+        <form [formGroup]="ProductForm" (ngSubmit)="addProductToFirebase()">
+            <label for="name">Title</label>
+            <input type="text" class="form-control" id="name" placeholder="Name of Product" formControlName="name">
+
+            <label for="category">Weight</label>
+            <input type="text" class="form-control" id="category" placeholder="eg:Braclets" formControlName="category">
+
+            <label for="image" class="form-label">Select a Image:</label>
+
+            <input type="file" (change)="onFileSelect($event)" accept=".png, .jpg">
+
+            <button type="submit" class="btn btn-dark">Add Product</button>
+        </form>
+        <!-- Form Data:
+        {{ProductForm.value | json}} -->
+    </div>
+</div>

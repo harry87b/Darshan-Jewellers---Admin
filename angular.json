@@ -98,6 +98,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Admin-img:build:production",
+            "firebaseProject": "darshan-jewellers-a076c",
+            "firebaseHostingSite": "darshan-jewellers-a076c"
+          }
         }
       }
     }
